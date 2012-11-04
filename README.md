@@ -1,6 +1,6 @@
 Advanced error handling in PHP
 ==============================
-PHP has several methods of handling errors and it makes distinction between error handling and exception handling. Additionally its error handling mechanism doesn't provide a way of handling "fatal errors", which will always crash the script. I'm presenting a convenient solution to handle all types of errors, including fatal ones, and exceptions with only few lines of code.
+PHP has several methods of handling errors and it makes distinction between error handling and exception handling. Additionally its error handling mechanism doesn't provide a way of handling "fatal errors", which will always crash the script. I'm presenting a convenient solution to handle all types of errors, including fatal ones, and exceptions with only few lines of code.<br />
 Here is how it works. Instead of using try/catch and setting an error handler we do it all at once. Oh, and by the way, the trick in catching fatal errors is by using shutdown callbacks. The latter execute even after fatal errors. So nornally in PHP if we want to handle all of these we need a try/catch block, an error handler and a shutdown callback. And if we want to nest these the mess becomes even bigger. Check the code bellow.
 
 In short all we need to do is this - a few lines of code. This is PHP 5.3, it will work with PHP 5.2 but may need some tweaks and you can't use closures there.
