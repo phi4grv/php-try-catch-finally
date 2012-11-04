@@ -117,7 +117,7 @@ _try(
 echo 'this code won\'t execute because of the php errors, but the finally blocks will execute';
 ```
 
-The above examle will output this.
+The above example will output this.
 <pre>
 trying some code that throws
 caught error: My very own exception
